@@ -10,7 +10,7 @@ I designed an environment that will simulate a small pruduction-style web applic
 
 ## The Architecture
 
-<img src="../diagrams/architecture.png" width="800">
+<img src="diagrams/architecture.png" width="800">
 
 ---
 
