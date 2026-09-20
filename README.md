@@ -10,60 +10,7 @@ I designed an environment that will simulate a small pruduction-style web applic
 
 ## The Architecture
 
-```text
-                         Internet
-                            │
-                            ▼
-              ┌──────────────────────────┐
-              │ Global External HTTP LB  │
-              │      Public IP :80       │
-              └────────────┬─────────────┘
-                           │
-                           ▼
-              ┌──────────────────────────┐
-              │   Web Managed Instance   │
-              │         Group            │
-              │                          │
-              │   ┌──────┐   ┌──────┐    │
-              │   │ Web  │   │ Web  │    │
-              │   │ VM 1 │   │ VM 2 │    │
-              │   └──────┘   └──────┘    │
-              │    Private IPs only      │
-              └────────────┬─────────────┘
-                           │
-                           │ Cloud NAT
-                           ▼
-                      ┌───────────┐
-                      │ Internet  │
-                      └───────────┘
-
-
-        ┌──────────────────────────────────────────┐
-        │              Custom VPC                  │
-        │            secure-network                │
-        │                                          │
-        │  ┌────────────────────────────────────┐  │
-        │  │ Web Subnet                         │  │
-        │  │ 10.10.10.0/24                      │  │
-        │  │                                    │  │
-        │  │ Web MIG / Private Web VMs          │  │
-        │  └────────────────────────────────────┘  │
-        │                                          │
-        │  ┌────────────────────────────────────┐  │
-        │  │ App Subnet                         │  │
-        │  │ 10.10.20.0/24                      │  │
-        │  │                                    │  │
-        │  │ Private App Server                 │  │
-        │  └────────────────────────────────────┘  │
-        │                                          │
-        │  ┌────────────────────────────────────┐  │
-        │  │ Management Subnet                  │  │
-        │  │ 10.10.30.0/24                      │  │
-        │  └────────────────────────────────────┘  │
-        │                                          │
-        │  Firewall │ Flow Logs │ IAP │ NAT        │
-        └──────────────────────────────────────────┘
-```
+<img src="../diagrams/architecture.png" width="800">
 
 ---
 

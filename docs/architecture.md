@@ -6,45 +6,6 @@ The GCP Secure Network Lab uses a segmented VPC with private web and application
 
 <img src="../diagrams/architecture.png" width="800">
 
-```text
-                         Internet
-                            │
-                            ▼
-                Global External HTTP
-                   Load Balancer
-                            │
-                            ▼
-                 ┌──────────────────┐
-                 │   Web MIG        │
-                 │                  │
-                 │  Web VM 1        │
-                 │  Web VM 2        │
-                 │  Private IPs     │
-                 └────────┬─────────┘
-                          │
-              ┌───────────┴───────────┐
-              │                       │
-              ▼                       ▼
-        App Subnet               Cloud NAT
-        10.10.20.0/24                 │
-              │                       ▼
-              ▼                    Internet
-         App Server
-         Private IP
-
-
-              ┌──────────────────────────────┐
-              │        secure-network        │
-              │            VPC               │
-              │                              │
-              │ Web: 10.10.10.0/24           │
-              │ App: 10.10.20.0/24           │
-              │ Mgmt: 10.10.30.0/24          │
-              └──────────────────────────────┘
-
-        IAP SSH • Firewall • VPC Flow Logs • IAM
-```
-
 ## Main Components
 
 | Component                 | Purpose                                     |
