@@ -4,7 +4,7 @@
 
 The GCP Secure Network Lab uses a segmented VPC with private web and application servers. Terraform manages the core infrastructure.
 
-<img src="diagrams/architecture.png" width="800">
+<img src="../diagrams/architecture.png" width="800">
 
 ```text
                          Internet
