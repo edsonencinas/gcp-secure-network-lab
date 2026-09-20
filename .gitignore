@@ -1,0 +1,65 @@
+# Terraform
+
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfvars
+*.tfvars.json
+
+# Terraform crash logs
+
+crash.log
+crash.*.log
+
+# Terraform override files
+
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# GCP credentials and secrets
+
+credentials/
+secrets/
+*.pem
+*.key
+*-service-account.json
+*-credentials.json
+.env
+.env.*
+
+# OS files
+
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE / Editor files
+
+.vscode/
+.idea/
+
+# Temporary files
+
+*.tmp
+*.temp
+*.log
+~*
+
+# Python
+
+**pycache**/
+*.py[cod]
+.venv/
+venv/
+
+# Node.js
+
+node_modules/
+
+# Build / generated files
+
+dist/
+build/
+coverage/
